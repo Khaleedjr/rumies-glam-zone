@@ -130,25 +130,25 @@
         </div>
       </div>
     </div>
-    <div class="booking-form fade-up">
+    <form id="bookingForm" class="booking-form fade-up">
       <div class="form-title">Book an Appointment</div>
       <div class="form-row">
         <div class="form-group">
-          <label class="form-label">First Name</label>
-          <input class="form-control" type="text" placeholder="Your name"/>
+          <label class="form-label" for="firstName">First Name</label>
+          <input id="firstName" name="firstName" class="form-control" type="text" placeholder="Your name" required/>
         </div>
         <div class="form-group">
-          <label class="form-label">Phone Number</label>
-          <input class="form-control" type="tel" placeholder="+234 …"/>
+          <label class="form-label" for="phoneNumber">Phone Number</label>
+          <input id="phoneNumber" name="phoneNumber" class="form-control" type="tel" placeholder="+234 ..." required/>
         </div>
       </div>
       <div class="form-group">
-        <label class="form-label">Email Address</label>
-        <input class="form-control" type="email" placeholder="your@email.com"/>
+        <label class="form-label" for="emailAddress">Email Address</label>
+        <input id="emailAddress" name="emailAddress" class="form-control" type="email" placeholder="your@email.com"/>
       </div>
       <div class="form-group">
-        <label class="form-label">Type of Appointment</label>
-        <select class="form-control">
+        <label class="form-label" for="appointmentType">Type of Appointment</label>
+        <select id="appointmentType" name="appointmentType" class="form-control" required>
           <option value="" disabled selected>Select a service…</option>
           <option>Everyday Glam</option>
           <option>Event Makeup</option>
@@ -158,15 +158,15 @@
         </select>
       </div>
       <div class="form-group">
-        <label class="form-label">Preferred Date</label>
-        <input class="form-control" type="date"/>
+        <label class="form-label" for="preferredDate">Preferred Date</label>
+        <input id="preferredDate" name="preferredDate" class="form-control" type="date" required/>
       </div>
       <div class="form-group">
-        <label class="form-label">Additional Notes</label>
-        <textarea class="form-control" rows="3" placeholder="Any details about the look you want…" style="resize:vertical;"></textarea>
+        <label class="form-label" for="bookingNotes">Additional Notes</label>
+        <textarea id="bookingNotes" name="bookingNotes" class="form-control" rows="3" placeholder="Any details about the look you want..." style="resize:vertical;"></textarea>
       </div>
-      <button class="btn-submit" onclick="handleBooking(this)">Send Booking Request ✦</button>
-    </div>
+      <button id="bookingSubmit" class="btn-submit" type="submit">Send Booking Request ✦</button>
+    </form>
   </section>
 
   <!-- ── FOOTER ── -->
